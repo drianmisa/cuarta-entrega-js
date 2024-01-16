@@ -1,0 +1,135 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+  max-width: 1250px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 40px;
+  padding-left: 10px;
+  border-left: 10px solid #ad2b4e;
+  margin-top: 80px;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+}
+header .cabecera {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .cabecera img {
+  width: 100px;
+}
+header .cabecera nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+header .cabecera nav ul li a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+header .cabecera nav ul li a:hover {
+  color: #ad2b4e;
+}
+
+.contenedor-fotos {
+  margin-top: 80px;
+}
+.contenedor-fotos .ul-usuarios {
+  padding: 0;
+  list-style: none;
+}
+.contenedor-fotos .ul-usuarios li {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ad2b4e;
+  border-radius: 10px;
+  color: #fff;
+  gap: 10px;
+  box-shadow: 1px 1px 8px #ad2b4e;
+}
+.contenedor-fotos .ul-usuarios li img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contenedor-fotos .ul-usuarios li h3 {
+  margin-top: 20px;
+}
+
+.ul-usuarios {
+  padding: 0;
+  list-style: none;
+}
+
+/**************************slider**************************************/
+.swiper {
+  height: 600px;
+}
+.swiper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 600px) {
+  .ul-usuarios {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (min-width: 768px) {
+  header {
+    background-color: black;
+    padding: 0px;
+  }
+  header .cabecera {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header .cabecera nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .ul-usuarios {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 923px) {
+  .ul-usuarios {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=style.css.map */
