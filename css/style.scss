@@ -21,19 +21,32 @@ html {
     border-left: 10px solid #ad2b4e;
     margin-top: 80px;
   }
+  @font-face {
+    font-family: 'Beautiful Barbies';
+    src: url('../includes/fonts/Beautiful-Barbies.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
   header{
     background-color: black;
     padding: 20px;
     .cabecera{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content:space-between;
         align-items: center;
         img{
             width: 100px;
+            z-index: 4;
 
         }
+        .material-icons {
+          color: #fff;
+          cursor: pointer;
+          z-index: 4;
+      }
         nav{
+          display: none;
             ul{
                 height: 100%;
                 display: flex;
@@ -53,6 +66,17 @@ html {
                 }
             }
         }
+        .menu-active {
+          display: block;
+          position:fixed;
+          width: 100%;
+          height: 100%;
+          top:0;
+          left: 0;
+          background-color: black;
+          z-index: 3;
+          padding-top:  130px;
+      }
     }
   }
   .contenedor-fotos{
@@ -88,16 +112,52 @@ html {
     list-style: none;
    
   }
-
+  .btn-amor{
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(red, rgb(153, 16, 16));
+    &:hover{
+      background-image: linear-gradient(#ad2b2b, rgb(54, 3, 3));
+    }
+  }
 
   /**************************slider**************************************/
   .swiper {
-    height: 600px;
+    height: 400px;
     img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        position: relative;
         
+    }
+    .titulos-sliders{
+      position: absolute;
+      top: 25%;
+      border: none;
+      padding: 0;
+      font-size: 50px;
+      font-family: 'Beautiful Barbies';
+      color: #ad2b4e;
+      text-shadow: 1px 1px 8px #fff;
+      left: 10%;
+    }
+  }
+
+  footer{
+    background-color: black;
+    color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+      text-align: center;
+      display: block;
     }
   }
   @media(min-width:600px){
@@ -117,7 +177,11 @@ html {
         .cabecera{
             flex-direction: row;
             justify-content: space-between;
+            .material-icons {
+              display: none;
+          }
             nav{
+              display: block;
                 ul{
                     height: 100%;
                     display: flex;
@@ -125,7 +189,21 @@ html {
                     flex-direction: row;
                     gap: 10px;
                 }
+               
             }
+        }
+      }
+      .swiper {
+        height: 500px;
+        .titulos-sliders{
+          position: absolute;
+          top: 25%;
+          border: none;
+          padding: 0;
+          font-size: 80px;
+          font-family: 'Beautiful Barbies';
+          color: #ad2b4e;
+          text-shadow: 1px 1px 8px #fff;
         }
       }
 
@@ -136,6 +214,9 @@ html {
   @media(min-width:923px){
     .ul-usuarios{
         grid-template-columns: repeat(4, 1fr);
+      }
+      .swiper {
+        height: 600px;
       }
   }
 

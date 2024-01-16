@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
     <script src="js/slider.js" defer></script>
@@ -15,7 +16,10 @@
         <div class="wrap">
             <div class="cabecera">
                 <img src="includes/img/logo.png">
-                <nav>
+                <span class="material-icons">
+                    menu
+                </span>
+                <nav class="menu-nav">
                     <ul>
                         <li><a href="">Inicio</a></li>
                         <li><a href="">Busca pareja</a></li>
@@ -30,9 +34,26 @@
         <section>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="includes/img/citas1.jpg"></div>
-                  <div class="swiper-slide"><img src="includes/img/citas2.webp"></div>
-                  <div class="swiper-slide"><img src="includes/img/citas3.webp"></div>
+                  <div class="swiper-slide">
+                    <img src="includes/img/citas1.jpg">
+                    <div class="wrap">
+                        <h2 class="titulos-sliders">
+                            Conoce tu pareja ideal
+                        </h2>
+                    </div>                    
+                </div>
+                  <div class="swiper-slide">
+                    <img src="includes/img/citas2.webp">
+                    <h2 class="titulos-sliders">
+                        Conoce tu pareja ideal
+                    </h2>
+                </div>
+                  <div class="swiper-slide">
+                    <img src="includes/img/citas3.webp">
+                    <h2 class="titulos-sliders">
+                        Conoce tu pareja ideal
+                    </h2>
+                </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -48,5 +69,13 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="wrap">
+            <div>
+                <span>Todos los derechos reservados</span>               
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

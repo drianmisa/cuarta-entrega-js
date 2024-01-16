@@ -1,4 +1,12 @@
-  /*****************************Consulta api************************************* */
+window.addEventListener("DOMContentLoaded", () =>{
+    let menu = document.querySelector(".material-icons");
+    let ulMenu =  document.querySelector(".menu-nav");
+    menu.addEventListener("click", () =>{
+        ulMenu.classList.toggle("menu-active");
+    });
+})
+ 
+ /*****************************Consulta api************************************* */
 const apiUrl = 'https://randomuser.me/api/?results=50&gender=female';
 
 let datosObtenidos = [];
@@ -38,12 +46,16 @@ fetch(apiUrl)
         numeroUsuario.classList.add("numero-usuario");
         numeroUsuario.textContent=numero;
 
+        let btnAmor = document.createElement("a");
+        btnAmor.classList.add("btn-amor");
+        btnAmor.textContent="Hacer match";
 
         contenedorUsuarios.appendChild(liUsuario);
         liUsuario.appendChild(imgUsuario);
         liUsuario.appendChild(h3Nombre);
         liUsuario.appendChild(numeroUsuario);
         liUsuario.appendChild(emailUsuario);
+        liUsuario.appendChild(btnAmor);
         
 
     }
